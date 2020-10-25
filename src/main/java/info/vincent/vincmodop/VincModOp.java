@@ -22,7 +22,7 @@ import java.util.stream.Collectors;
 @Mod("examplemod")
 public class VincModOp {
     // Directly reference a log4j logger.
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
 
     public VincModOp() {
         // Register the setup method for modloading

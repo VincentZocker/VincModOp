@@ -1,6 +1,6 @@
 package info.vincent.vincmodop;
 
-import net.minecraft.util.IItemProvider;
+import info.vincent.vincmodop.reference.Reference;
 import net.minecraftforge.registries.ObjectHolder;
 
 public class ModItems {
