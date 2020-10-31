@@ -2,6 +2,10 @@ package info.vincent.vincmodop;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.entity.EntityType;
+import net.minecraft.inventory.container.ContainerType;
+import net.minecraft.item.Item;
+import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -76,9 +80,42 @@ public class VincModOp {
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
         @SubscribeEvent
-        public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
+        public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
             // register a new block here
             LOGGER.info("HELLO from Register Block");
+            //ModBlocks.RegisterBlocks(event);
         }
+
+        @SubscribeEvent
+        public static void onItemRegistry(final RegistryEvent.Register<Item> event) {
+            // register a new block here
+            LOGGER.info("HELLO from Register ITEM");
+            //ModBlocks.RegisterBlockItems(event);
+            ModItems.RegisterItems(event);
+
+        }
+
+        @SubscribeEvent
+        public static void onEntityRegistry(final RegistryEvent.Register<EntityType<?>> event) {
+            // register a new block here
+            LOGGER.info("HELLO from Register Enityt");
+            //ModEntities.RegisterEntites(event);
+        }
+
+        @SubscribeEvent
+        public static void onTileEntityRegistry(final RegistryEvent.Register<TileEntityType<?>> event) {
+            // register a new block here
+            LOGGER.info("HELLO from Register Tile ENtity");
+            //ModBlocks.RegisterTileEntities(event);
+        }
+
+        @SubscribeEvent
+        public static void onContainerRegistry(final RegistryEvent.Register<ContainerType<?>> event) {
+            // register a new block here
+            LOGGER.info("HELLO from Register Tile ENtity");
+            //ModContainers.RegisterContainers(event);
+        }
+
     }
+
 }
