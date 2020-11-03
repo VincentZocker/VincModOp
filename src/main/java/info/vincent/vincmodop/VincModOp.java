@@ -1,5 +1,6 @@
 package info.vincent.vincmodop;
 
+import info.vincent.vincmodop.reference.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.EntityType;

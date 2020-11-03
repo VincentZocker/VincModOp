@@ -2,7 +2,7 @@ package info.vincent.vincmodop.reference;
 
 public class Reference {
     public static final String MODID = "vincmodop";
-    public static final String REIGSTRY_NAME_WITHERBOW_ITEM = "witherbowitem";
+    public static final String REIGSTRY_NAME_WITHERBOW_ITEM = "witherbowitem"; // must be the same like witherbowitem.json
 
     public static enum TEAM_OPTION_BUTTONS {
         INFINATE_BARRACKS_QUEUE, INFINANTE_ARCHERY_RANGE_QUEUE, INFINANTE_STABLES_QUEUE, INFINANTE_SIEGE_WORKSHOP_QUEUE, INFINANTE_TEMPLE_QUEUE
