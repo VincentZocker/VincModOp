@@ -1,7 +1,12 @@
 package info.vincent.vincmodop;
 
+import info.vincent.vincmodop.reference.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.entity.EntityType;
+import net.minecraft.inventory.container.ContainerType;
+import net.minecraft.item.Item;
+import net.minecraft.tileentity.TileEntityType;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -19,10 +24,10 @@ import org.apache.logging.log4j.Logger;
 import java.util.stream.Collectors;
 
 // The value here should match an entry in the META-INF/mods.toml file
-@Mod("examplemod")
+@Mod(Reference.MODID)
 public class VincModOp {
     // Directly reference a log4j logger.
-    private static final Logger LOGGER = LogManager.getLogger();
+    public static final Logger LOGGER = LogManager.getLogger();
 
     public VincModOp() {
         // Register the setup method for modloading
@@ -51,7 +56,7 @@ public class VincModOp {
 
     private void enqueueIMC(final InterModEnqueueEvent event) {
         // some example code to dispatch IMC to another mod
-        InterModComms.sendTo("examplemod", "helloworld", () -> {
+        InterModComms.sendTo("vincmod", "helloworld", () -> {
             LOGGER.info("Hello world from the MDK");
             return "Hello world";
         });
@@ -76,9 +81,42 @@ public class VincModOp {
     @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
     public static class RegistryEvents {
         @SubscribeEvent
-        public static void onBlocksRegistry(final RegistryEvent.Register<Block> blockRegistryEvent) {
+        public static void onBlocksRegistry(final RegistryEvent.Register<Block> event) {
             // register a new block here
             LOGGER.info("HELLO from Register Block");
+            //ModBlocks.RegisterBlocks(event);
         }
+
+        @SubscribeEvent
+        public static void onItemRegistry(final RegistryEvent.Register<Item> event) {
+            // register a new block here
+            LOGGER.info("HELLO from Register ITEM");
+            //ModBlocks.RegisterBlockItems(event);
+            ModItems.RegisterItems(event);
+
+        }
+
+        @SubscribeEvent
+        public static void onEntityRegistry(final RegistryEvent.Register<EntityType<?>> event) {
+            // register a new block here
+            LOGGER.info("HELLO from Register Enityt");
+            //ModEntities.RegisterEntites(event);
+        }
+
+        @SubscribeEvent
+        public static void onTileEntityRegistry(final RegistryEvent.Register<TileEntityType<?>> event) {
+            // register a new block here
+            LOGGER.info("HELLO from Register Tile ENtity");
+            //ModBlocks.RegisterTileEntities(event);
+        }
+
+        @SubscribeEvent
+        public static void onContainerRegistry(final RegistryEvent.Register<ContainerType<?>> event) {
+            // register a new block here
+            LOGGER.info("HELLO from Register Tile ENtity");
+            //ModContainers.RegisterContainers(event);
+        }
+
     }
+
 }
