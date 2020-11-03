@@ -10,6 +10,6 @@ public class WeaponsItemGroup extends ItemGroup {
 
     @Override
     public ItemStack createIcon() {
-        return new ItemStack(ModItems.SAMPLEITEM);
+        return new ItemStack(ModItems.WITHERBOW);
     }
 }

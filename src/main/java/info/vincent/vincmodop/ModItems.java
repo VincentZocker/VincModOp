@@ -6,14 +6,11 @@ import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.registries.ObjectHolder;
 
 public class ModItems {
-    @ObjectHolder(Reference.MODID + ":" + Reference.REIGSTRY_NAME_SAMPLE_ITEM)
-    public static SampleItem SAMPLEITEM = new SampleItem();
 
     @ObjectHolder(Reference.MODID + ":" + Reference.REIGSTRY_NAME_WITHERBOW_ITEM)
     public static WitherBow WITHERBOW = new WitherBow();
 
     public static void RegisterItems(final RegistryEvent.Register<Item> event) {
-        RegisterItem(event, ModItems.SAMPLEITEM);
         RegisterItem(event, ModItems.WITHERBOW);
     }
 
