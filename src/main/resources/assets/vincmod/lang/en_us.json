@@ -1,6 +1,7 @@
 {
     "_comment":"Items here",
     "item.vincmod.witherbowitem": "Wither Bow",
+    "itemGroup.weapons":"Vinc Weapons",
 
     "_comment":"End here"
 }
