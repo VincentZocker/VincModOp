@@ -1,7 +1,7 @@
 {
     "parent": "item/generated",
     "textures": {
-        "layer0": "vincmod:items/wither_bow_standby"
+        "layer0": "vincmod:item/witherbow_standby"
     },
     "display": {
         "thirdperson_righthand": {
@@ -30,21 +30,21 @@
             "predicate": {
                 "pulling": 1
             },
-            "model": "vincmod:item/wither_bow_pulling_0"
+            "model": "vincmod:item/witherbow_pulling_0"
         },
         {
             "predicate": {
                 "pulling": 1,
                 "pull": 0.65
             },
-            "model": "vincmod:item/wither_bow_pulling_1"
+            "model": "vincmod:item/witherbow_pulling_1"
         },
         {
             "predicate": {
                 "pulling": 1,
                 "pull": 0.9
             },
-            "model": "vincmod:item/wither_bow_pulling_2"
+            "model": "vincmod:item/witherbow_pulling_2"
         }
     ]
 }

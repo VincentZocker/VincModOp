@@ -1,0 +1,6 @@
+{
+    "parent": "vincmod:item/witherbowitem",
+    "textures": {
+        "layer0": "vincmod:item/witherbow_pulling_0"
+    }
+}
